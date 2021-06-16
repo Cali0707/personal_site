@@ -1,8 +1,24 @@
+@font-face {
+  font-family: "Nunito";
+  src: local("Nunito"),
+  url("./assets/fonts/Nunito/Nunito-Regular.ttf");
+}
+
+@font-face {
+  font-family: Martel;
+  src: local("Martel"),
+  url("./assets/fonts/Martel/Martel-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Maitree";
+  src: local("Maitree"),
+  url("./assets/fonts/Maitree/Maitree-Regular.ttf");
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Maitree", "Martel", "Nunito", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
