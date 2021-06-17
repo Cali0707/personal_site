@@ -1,24 +1,26 @@
+/*Titles are Poppins, SubTitles are RaleWay, normal text is Cairo*/
+
 @font-face {
-  font-family: "Nunito";
-  src: local("Nunito"),
-  url("./assets/fonts/Nunito/Nunito-Regular.ttf");
+  font-family: "Poppins";
+  src: local("Poppins"),
+  url("./assets/fonts/Poppins/Poppins-Regular.ttf");
 }
 
 @font-face {
-  font-family: Martel;
-  src: local("Martel"),
-  url("./assets/fonts/Martel/Martel-Regular.ttf");
+  font-family: "Raleway";
+  src: local("Raleway"),
+  url("./assets/fonts/Raleway/Raleway-VariableFont_wght.ttf");
 }
 
 @font-face {
-  font-family: "Maitree";
-  src: local("Maitree"),
-  url("./assets/fonts/Maitree/Maitree-Regular.ttf");
+  font-family: "Cairo";
+  src: local("Cairo"),
+  url("./assets/fonts/Cairo/Cairo-Regular.ttf");
 }
 
 body {
   margin: 0;
-  font-family: "Maitree", "Martel", "Nunito", sans-serif;
+  font-family: "Cairo", "Raleway", "Poppins", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

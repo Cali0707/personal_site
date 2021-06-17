@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import './assets/fonts/Poppins/Poppins-Regular.ttf';
+import './assets/fonts/Cairo/Cairo-Regular.ttf';
+import './assets/fonts/Raleway/Raleway-VariableFont_wght.ttf';
 
 ReactDOM.render(
   <React.StrictMode>
