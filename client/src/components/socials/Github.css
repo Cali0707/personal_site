@@ -10,6 +10,7 @@
     cursor: pointer;
     align-content: center;
     box-sizing: border-box;
+    display: inline-block;
 }
 
 
