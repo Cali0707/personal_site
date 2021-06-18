@@ -1,0 +1,38 @@
+.github {
+    background-color: var(--clr-neutral-700);
+    max-width: 100%;
+    width: max-content;
+    padding: 8px;
+    border-radius: 6px;
+    transition: transform 300ms ease, color 300ms ease;
+    color: gray;
+    text-decoration: none;
+    cursor: pointer;
+    align-content: center;
+    box-sizing: border-box;
+}
+
+
+.github:hover, .github:focus-within {
+    transform: scale(1.05);
+    background-color: var(--clr-accent-400);
+    color: var(--clr-neutral-700);
+}
+
+.github > p {
+    display: inline;
+    margin-left: 12px;
+}
+
+.github-svg {
+    fill: gray;
+    margin-bottom: -6px;
+    transition: fill 300ms ease, transform 300ms ease;
+    display: inline;
+}
+
+.github:hover .github-svg, .github:focus-within .github-svg {
+    fill: var(--clr-neutral-700);
+    transform: scale(1.05);
+}
+

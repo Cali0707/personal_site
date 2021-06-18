@@ -18,7 +18,16 @@
   url("./assets/fonts/Cairo/Cairo-Regular.ttf");
 }
 
+:root {
+    --clr-neutral-900: hsl(207, 19%, 9%);
+    --clr-neutral-700: hsl(207, 19%, 16%);
+    --clr-neutral-300: hsl(207, 17%, 60%);
+    --clr-neutral-100: hsl(0, 0%, 100%);
+    --clr-accent-400: hsl(142, 90%, 61%);
+}
+
 body {
+  background-color: var(--clr-neutral-900);
   margin: 0;
   font-family: "Cairo", "Raleway", "Poppins", sans-serif;
   -webkit-font-smoothing: antialiased;

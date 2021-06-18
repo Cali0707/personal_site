@@ -1,11 +1,21 @@
-.img-container {
+.project-header {
     overflow-y: hidden;
     height: 30vh;
     background-position: center;
+    background-size: cover;
+    display: flex;
+    align-content: center;
+    position: sticky;
+    top: 0;
 }
 
-.project-page {
-    margin: 40px;
+
+.project-content {
+    margin: 0 40px 40px 40px;
+    background-image: linear-gradient(
+        rgba(19, 23, 27, 0),
+        var(--clr-neutral-900),
+    );
 }
 
 /*.project-page:first-child {*/
