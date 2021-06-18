@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(dir));
 
 app.get('*', (req, res) => {
-    res.sendFile("index", {root: dir})
+    res.sendFile("index.html", {root: dir})
 })
 
 app.listen(PORT, () => {

@@ -1,0 +1,10 @@
+.header {
+    overflow-y: hidden;
+    height: 30vh;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-content: center;
+    position: sticky;
+    top: 0;
+}
