@@ -9,6 +9,14 @@
     max-width: 100%;
 }
 
+.title.is-minor {
+    font-size: 46px;
+    font-weight: 450;
+    font-family: Poppins, sans-serif;
+    padding: 5px 0;
+    color: var(--clr-accent-400)
+}
+
 .title::after {
     content: '';
     width: 100%;
@@ -17,6 +25,10 @@
     background-color: var(--clr-accent-400);
     left: 0;
     bottom: 0;
+}
+
+.title.is-minor::after {
+    content: none;
 }
 
 @media only screen and (max-width: 767px) {

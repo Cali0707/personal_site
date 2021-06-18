@@ -29,7 +29,7 @@ export default function TextInput(props){
         />
     return(
         <div>
-            <div style={{opacity:0}} className={label}><TextAccent style={{fontSize: '16px'}}>{props.label}</TextAccent></div>
+            <div style={{opacity:0}} className={label}><Subtitle style={{fontSize: "16px"}}>{props.label}</Subtitle></div>
             <div className={"requiredStar"}>{props.required ? '*' : ''}</div>
             {inputElem}
         </div>

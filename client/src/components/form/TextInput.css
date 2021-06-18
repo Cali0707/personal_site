@@ -10,22 +10,21 @@ input:focus {
 }
 
 .formTextBox {
-    background-color: #ffffff;
+    background-color: var(--clr-neutral-700);
     border-radius: 5px;
     padding: 5px 15px;
-    transition: border 0.5s, color 0.5s, background-color 0.5s;
+    transition: border 0.3s ease, color 0.3s ease, background-color 0.3s ease;
     text-decoration: none;
     font-size: 18px;
     display: inline-block;
-    border: 2px solid black;
+    border: 1px solid var(--clr-accent-400);
+    color: var(--clr-neutral-300);
 }
 
-.formTextBox:focus {
-    border: 2px solid #2e2e2e;
-}
-
-.formTextBox:hover {
-    border: 2px solid #282828;
+.formTextBox:focus, .formTextBox:hover {
+    border: 1px solid var(--clr-neutral-700);
+    background-color: var(--clr-accent-400);
+    color: var(--clr-neutral-900)
 }
 
 .textBoxLabelFadeIn {

@@ -1,0 +1,40 @@
+.home {
+
+}
+
+.home-header {
+    overflow-y: hidden;
+    height: 30vh;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-content: center;
+    position: sticky;
+    top: 0;
+}
+
+.profile {
+    border-radius: 50%;
+    max-width: 20vw;
+    margin-right: 24px;
+}
+
+.about-me {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    padding: 24px;
+}
+
+.about-me-text {
+    display: inline-block;
+}
+
+.navigation {
+    padding: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    margin: 0 auto;
+}

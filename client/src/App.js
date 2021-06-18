@@ -1,21 +1,33 @@
 import './App.css';
 import ProjectCard from "./components/project/ProjectCard";
 import ProjectPage from "./components/project/ProjectPage";
-import project from "./utils/project";
-import {Title} from "./components/text/text";
+import projects from "./utils/project";
+import React from "react";
+import {BrowserRouter, Route, Redirect, Switch, useHistory} from "react-router-dom";
+import Home from "./pages/Home";
 
 function App() {
-  return (
-    <div className="App">
-        {/*<div className={"project-grid"}>*/}
-        {/*    /!*<ProjectCard project={project}/>*!/*/}
-        {/*    /!*<ProjectCard project={project}/>*!/*/}
-        {/*    /!*<ProjectCard project={project}/>*!/*/}
-        {/*    */}
-        {/*</div>*/}
-        <ProjectPage project={project} />
-    </div>
-  );
+    // const routerRef = React.useRef();
+    // let history = useHistory();
+    //
+    // React.useEffect(() => {
+    //     handlePageChange(window.location.pathname);
+    // }, []);
+    //
+    // function handlePageChange (link) {
+    //     history.push(link)
+    // }
+
+    return (
+       <BrowserRouter>
+           <Switch>
+               {projects.map(proj => {
+                   return(<Route path={proj.path} exact render={()=><ProjectPage project={proj}/>} />)
+               })}
+               <Route path={'/'} component={Home} />
+           </Switch>
+       </BrowserRouter>
+    );
 }
 
 export default App;

@@ -1,9 +1,10 @@
 import React from "react";
 import './Title.css';
 
-export default function Title ({children, style}) {
+export default function Title ({children, style, isMinor}) {
+    const className = "title " + (isMinor ? "is-minor" : "");
     return (
-        <div className={"title"} style={style}>
+        <div className={className} style={style}>
             {children}
         </div>
     )
