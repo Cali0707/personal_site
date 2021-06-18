@@ -1,11 +1,15 @@
 import './App.css';
-import Project from "./components/project/ProjectPage";
+import ProjectCard from "./components/project/ProjectCard";
 import project from "./utils/project";
 
 function App() {
   return (
     <div className="App">
-      <Project project={project}/>
+        <div className={"project-grid"}>
+            <ProjectCard project={project}/>
+            <ProjectCard project={project}/>
+            <ProjectCard project={project}/>
+        </div>
     </div>
   );
 }
