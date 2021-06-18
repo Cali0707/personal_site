@@ -1,0 +1,13 @@
+.img-container {
+    overflow-y: hidden;
+    height: 30vh;
+    background-position: center;
+}
+
+.project-page {
+    margin: 40px;
+}
+
+/*.project-page:first-child {*/
+/*    margin: -40px -40px 0 -40px;*/
+/*}*/
