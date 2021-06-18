@@ -16,13 +16,13 @@ input:focus {
     transition: border 0.3s ease, color 0.3s ease, background-color 0.3s ease;
     text-decoration: none;
     font-size: 18px;
+    font-family: Cairo, sans-serif;
     display: inline-block;
-    border: 1px solid var(--clr-accent-400);
+    border: 1px solid var(--clr-neutral-700);
     color: var(--clr-neutral-300);
 }
 
 .formTextBox:focus, .formTextBox:hover {
-    border: 1px solid var(--clr-neutral-700);
     background-color: var(--clr-accent-400);
     color: var(--clr-neutral-900)
 }

@@ -9,3 +9,23 @@
     top: 0;
     z-index: 100;
 }
+
+.back-arrow {
+    color: var(--clr-neutral-100);
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.home-icon {
+    color: white;
+    position: absolute;
+    top: 20px;
+    left: 60px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.home-icon:hover, .back-arrow:hover {
+    color: var(--clr-accent-400);
+    transform: scale(1.1);
+}

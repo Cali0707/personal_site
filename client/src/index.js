@@ -6,10 +6,13 @@ import reportWebVitals from './reportWebVitals';
 import './assets/fonts/Poppins/Poppins-Regular.ttf';
 import './assets/fonts/Cairo/Cairo-Regular.ttf';
 import './assets/fonts/Raleway/Raleway-VariableFont_wght.ttf';
+import {BrowserRouter} from "react-router-dom";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+      <BrowserRouter>
+          <App />
+      </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
