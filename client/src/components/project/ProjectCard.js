@@ -3,15 +3,15 @@ import './ProjectCard.css';
 
 export default function ProjectCard ({project}) {
     return (
-        <div className={"project-card"}>
+        <div className={"project-card"} style={{backgroundImage: `url(${project.imageLink})`}}>
             <div className={"project-card-content"}>
                 <h2 className={"project-card-title"}>
-                    Some project
+                    {project.name}
                 </h2>
                 <p className={"project-card-body"}>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, voluptate.
+                    {project.description}
                 </p>
-                <a className={"project-button"} href={"#"}>Learn More</a>
+                <a className={"project-button"} href={project.path}>Learn More</a>
             </div>
         </div>
     )

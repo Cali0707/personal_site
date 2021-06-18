@@ -1,10 +1,10 @@
 import './App.css';
-import ProjectCard from "./components/project/ProjectCard";
 import ProjectPage from "./components/project/ProjectPage";
 import projects from "./utils/project";
 import React from "react";
 import {BrowserRouter, Route, Redirect, Switch, useHistory} from "react-router-dom";
 import Home from "./pages/Home";
+import ProjectList from "./pages/ProjectList";
 
 function App() {
     // const routerRef = React.useRef();
@@ -24,6 +24,7 @@ function App() {
                {projects.map(proj => {
                    return(<Route path={proj.path} exact render={()=><ProjectPage project={proj}/>} />)
                })}
+               <Route path={'/projects'} exact render={()=><ProjectList projects={projects} />} />
                <Route path={'/'} component={Home} />
            </Switch>
        </BrowserRouter>

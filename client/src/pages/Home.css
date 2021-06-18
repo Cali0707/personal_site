@@ -15,7 +15,8 @@
 
 .profile {
     border-radius: 50%;
-    max-width: 20vw;
+    width: 20vw;
+    height: 20vw;
     margin-right: 24px;
 }
 
