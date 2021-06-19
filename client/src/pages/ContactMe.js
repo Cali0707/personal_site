@@ -4,15 +4,15 @@ import {useHistory} from "react-router-dom";
 import Header from "../components/Header";
 import {Subtitle, TextSection} from "../components/text/text";
 import TextInput from "../components/form/TextInput";
+import Button from "../components/form/Button";
 
 export default function ContactMe () {
-    const history = useHistory();
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
 
     const handleSubmit = () => {
-
+        console.table([name, email, message])
     }
 
     return (
@@ -25,12 +25,13 @@ export default function ContactMe () {
                     within 1-2 business days.
                 </TextSection>
                 <div>
-                    <TextInput label={"Name"} type={"text"} value={name} onChange={(text)=>setName(text)} />
-                    <TextInput label={"Email"} type={"text"} value={email} onChange={(text)=>setEmail(text)} />
+                    <TextInput label={"Name"} type={"text"} value={name} width={"50vw"} onChange={(text)=>setName(text)} />
+                    <TextInput label={"Email"} type={"text"} value={email} width={"50vw"} onChange={(text)=>setEmail(text)} />
                 </div>
                 <TextInput label={"Message"} width={"50vw"} type={"textArea"} value={message} onChange={(text)=>setMessage(text)} />
+                <Button onClick={handleSubmit} label={"Submit"} style={{margin: '12px 0'}}/>
                 <Subtitle>Social Media</Subtitle>
-                <TextSection>Fell free to follow me on my social medias, and to reach out to me there as well.
+                <TextSection>Feel free to follow me on my social medias, and to reach out to me there as well.
                 </TextSection>
             </div>
         </div>
