@@ -1,22 +1,31 @@
-const nodeoutlook = require('nodejs-nodemailer-outlook');
-const emailConfig = require('../config/email.config.json')
+const nodemailer = require('nodemailer')
+const gmailConfig = require('../config/gmail.config').local;
 
-const sendEmail = async (email, subject, text) => {
-    nodeoutlook.sendEmail({
+const sendEmail = (email, subject, text) => {
+    const transporter = nodemailer.createTransport({
+        host: 'smtp.gmail.com',
+        port: 465,
+        secure: true,
         auth: {
-            user: emailConfig.email,
-            pass: emailConfig.pass,
-        },
-        from: emailConfig.email,
+            user: gmailConfig.email,
+            pass: gmailConfig.password
+        }
+    });
+
+    const mailOptions = {
+        from: gmailConfig.email,
         to: 'calumramurray@gmail.com',
         subject: subject,
         text: text,
         replyTo: email,
+    }
 
-        onError: (e) => (e),
-        onSuccess: (i) => (i)
+    transporter.sendMail(mailOptions, function(error, info) {
+        if (error) {
+            console.log(error)
+        }
+        console.log('Message sent: ' + info.response)
     })
-
 }
 
 exports.sendEmail = sendEmail;
