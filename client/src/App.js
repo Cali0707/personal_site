@@ -7,6 +7,16 @@ import Home from "./pages/Home";
 import ProjectList from "./pages/ProjectList";
 import ContactMe from "./pages/ContactMe";
 
+/* TODO
+- Make My Interests page
+- Populate Projects page
+- Use local storage to prevent multiple emails (maybe also some kind of server side stop)
+- Make popup modal
+- Make loading animation
+- make Education page
+- Make Employment page
+ */
+
 function App() {
 
     return (

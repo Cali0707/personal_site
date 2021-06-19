@@ -5,14 +5,34 @@ import Header from "../components/Header";
 import {Subtitle, TextSection} from "../components/text/text";
 import TextInput from "../components/form/TextInput";
 import Button from "../components/form/Button";
+import {Modal} from "react-bootstrap";
+
+const url = process.env.MODE === 'production' ? 'https://www.calummurray.ca/email' : 'http://localhost:3000/email'
 
 export default function ContactMe () {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
+    const [subject, setSubject] = useState("");
     const [message, setMessage] = useState("");
+    const [isSuccess, setIsSuccess] = useState(false)
 
     const handleSubmit = () => {
-        console.table([name, email, message])
+        if(!isSuccess){
+            const requestOptions = {
+                method: 'POST',
+                headers: {"Content-Type": "application/json"},
+                body: JSON.stringify({
+                    name: name,
+                    email: email,
+                    subject: subject,
+                    message: message
+                })
+            };
+            fetch(url, requestOptions)
+                .then(response => response.json())
+                .then(data => setIsSuccess(data.message === "Email sent successfully!"))
+        }
+
     }
 
     return (
@@ -27,6 +47,7 @@ export default function ContactMe () {
                 <div>
                     <TextInput label={"Name"} type={"text"} value={name} width={"50vw"} onChange={(text)=>setName(text)} />
                     <TextInput label={"Email"} type={"text"} value={email} width={"50vw"} onChange={(text)=>setEmail(text)} />
+                    <TextInput label={"Subject"} type={"text"} value={subject} width={"50vw"} onChange={(text)=>setSubject(text)} />
                 </div>
                 <TextInput label={"Message"} width={"50vw"} type={"textArea"} value={message} onChange={(text)=>setMessage(text)} />
                 <Button onClick={handleSubmit} label={"Submit"} style={{margin: '12px 0'}}/>
