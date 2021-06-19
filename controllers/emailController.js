@@ -1,7 +1,14 @@
 const nodemailer = require('nodemailer')
-const gmailConfig = require('../config/gmail.config').local;
+const gmailConfigs = require('../config/gmail.config');
+let gmailConfig;
+if (process.env.MODE === 'production'){
+    gmailConfig = gmailConfigs.production;
+} else {
+    gmailConfig = gmailConfigs.local
+}
 
-const sendEmail = (email, subject, text) => {
+const sendEmail = (req, res) => {
+    const {subject, message, email, name} = req.body;
     const transporter = nodemailer.createTransport({
         host: 'smtp.gmail.com',
         port: 465,
@@ -16,15 +23,19 @@ const sendEmail = (email, subject, text) => {
         from: gmailConfig.email,
         to: 'calumramurray@gmail.com',
         subject: subject,
-        text: text,
+        text: message + `\n\nFrom: ${name}`,
         replyTo: email,
     }
 
     transporter.sendMail(mailOptions, function(error, info) {
         if (error) {
-            console.log(error)
+            res.status(500).send({
+                message: 'There was an error'
+            })
         }
-        console.log('Message sent: ' + info.response)
+        res.status(300).send({
+            message: "Email sent successfully!"
+        })
     })
 }
 

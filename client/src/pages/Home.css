@@ -39,3 +39,16 @@
     width: 70%;
     margin: 0 auto;
 }
+
+@media only screen and (max-width: 767px) {
+    .about-me {
+        flex-direction: column;
+    }
+    .profile {
+        margin: auto;
+    }
+    .navigation {
+        flex-direction: column;
+        margin: auto;
+    }
+}

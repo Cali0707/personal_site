@@ -20,7 +20,7 @@
 .project-card-content {
     --padding: 1.5rem;
     position: absolute;
-    /*outline: 1px solid white;*/
+    bottom: 0;
     height: 30ch;
     padding: var(--padding);
     background: linear-gradient(

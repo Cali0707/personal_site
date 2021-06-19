@@ -14,6 +14,12 @@ app.use(express.static(dir));
 
 emailRoutes(app);
 
+app.get('/mode', (req, res) => {
+    res.status(300).send({
+        message: process.env.MODE
+    })
+})
+
 app.get('*', (req, res) => {
     res.sendFile("index.html", {root: dir})
 })
