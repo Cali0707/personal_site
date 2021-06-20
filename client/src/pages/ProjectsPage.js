@@ -1,9 +1,9 @@
 import React, {useState} from "react";
-import './ProjectList.css'
-import ProjectCard from "../components/project/ProjectCard";
+import './ProjectsPage.css'
+import Card from "../components/project/Card";
 import Header from "../components/Header";
 
-export default function ProjectList ({projects, history}) {
+export default function ProjectsPage ({projects}) {
     const [search, isSearching] = useState("");
 
     const handleSearch = (text) => {
@@ -11,7 +11,7 @@ export default function ProjectList ({projects, history}) {
     }
 
     const projectCards = projects.map(proj => {
-        return <ProjectCard project={proj} />
+        return <Card cardItem={proj} />
     })
 
     return (

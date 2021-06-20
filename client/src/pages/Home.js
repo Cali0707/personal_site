@@ -29,6 +29,7 @@ export default function Home () {
             <div className={"navigation"}>
                 <Button onClick={()=>{handleClick("/projects")}} label={"View my Projects"} large/>
                 <Button onClick={()=>{handleClick('/contact')}} label={"Contact Me"} large />
+                <Button onClick={()=>{handleClick('/interests')}} label={"Interests"} large />
             </div>
 
         </div>
