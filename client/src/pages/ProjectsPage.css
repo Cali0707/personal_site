@@ -4,3 +4,12 @@
     justify-content: center;
     align-items: center;
 }
+
+.dropdown-toggle, .btn, .btn-primary {
+    background-color: var(--clr-neutral-700);
+    border: none;
+}
+
+.dropdown-toggle:hover, .btn:hover, .btn-primary:hover {
+    background-color: var(--clr-accent-400);
+}

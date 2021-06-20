@@ -29,3 +29,12 @@
     color: var(--clr-accent-400);
     transform: scale(1.1);
 }
+
+@media only screen and (max-width: 767px) {
+    .header {
+        height: 20vh;
+    }
+    .home-icon {
+       margin: 0 -5px;
+    }
+}
