@@ -9,6 +9,7 @@ import CardsPage from "./pages/ProjectsPage";
 import ContactMe from "./pages/ContactMe";
 import Timeline from "./components/Timeline";
 import Interests from "./pages/Interests";
+import DropdownSelect from "./components/form/DropdownSelect";
 
 /* TODO
 - Populate Interests page
@@ -25,16 +26,17 @@ import Interests from "./pages/Interests";
 function App() {
 
     return (
-       <Switch>
-           {projects.map(proj => {
-               return(<Route path={proj.path} exact render={()=><ProjectPage project={proj}/>} />)
-           })}
-           <Route path={'/projects'} exact render={()=><CardsPage projects={projects} />} />
-           <Route path={'/contact'} component={ContactMe} />
-           <Route path={'/interests'} render={()=><Interests interests={interests} />} />
-           <Route path={'/'} render={()=><Home />} />
-
-       </Switch>
+       // <Switch>
+       //     {projects.map(proj => {
+       //         return(<Route path={proj.path} exact render={()=><ProjectPage project={proj}/>} />)
+       //     })}
+       //     <Route path={'/projects'} exact render={()=><CardsPage projects={projects} />} />
+       //     <Route path={'/contact'} component={ContactMe} />
+       //     <Route path={'/interests'} render={()=><Interests interests={interests} />} />
+       //     <Route path={'/'} render={()=><Home />} />
+       //
+       // </Switch>
+        <DropdownSelect />
     );
 }
 

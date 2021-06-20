@@ -5,11 +5,26 @@
     align-items: center;
 }
 
+.dropdown-button {
+    align-content: center;
+}
+
 .dropdown-toggle, .btn, .btn-primary {
     background-color: var(--clr-neutral-700);
     border: none;
 }
 
-.dropdown-toggle:hover, .btn:hover, .btn-primary:hover {
+.dropdown-toggle:hover,
+.dropdown-toggle:active,
+.btn:hover,
+.btn:active,
+.btn-primary:hover,
+.btn-primary:active {
+    background-color: var(--clr-accent-400);
+    border: none;
+}
+
+.btn-primary.dropdown-toggle:focus {
+    border: none;
     background-color: var(--clr-accent-400);
 }
