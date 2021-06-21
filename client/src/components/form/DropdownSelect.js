@@ -1,52 +1,40 @@
 import React from "react";
-import { default as Select } from "react-select";
+import MultiSelect from "react-multi-select-component";
+import './DropdownSelect.css'
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faCheckCircle, faCircle} from "@fortawesome/free-solid-svg-icons";
 
-const options = [
-    {value: 'Python', label: "Python"},
-    {value: "React", label: "React"},
-    {value: "Node.js", label: "Node.js"}
-]
-
-const customStyles = {
-    control: (provided, state) => ({
-        ...provided,
-        border: "none",
-        color: state.isFocused ? "var(--clr-neutral-900)" : "var(--clr-neutral-600)",
-        boxShadow: state.isFocused ? "null" : "null",
-        background: state.isFocused ? "var(--clr-accent-400)" : "var(--clr-neutral-700)",
-        borderColor: state.isFocused ? "var(--clr-neutral-700)" : "var(--clr-neutral-900)",
-        fontFamily: "Cairo",
-    }),
-    option: (provided, state) => ({
-        ...provided,
-        fontFamily: "Cairo",
-        background: "var(--clr-neutral-700)",
-        color: "var(--clr-neutral-300)",
-        border: "none",
-        ':hover': {
-            ...provided[":hover"],
-            background: "var(--clr-accent-400)",
-            color: "var(--clr-neutral-900)"
-        }
-    }),
-    menuList: provided => ({
-        ...provided,
-        background: "var(--clr-neutral-700)"
-    }),
-    multiValue: provided => ({
-        ...provided,
-        background: "var(--clr-neutral-600)"
-    })
+function DropdownItem ({checked, option, onClick, disabled}) {
+    return (
+        <div className={`dropdown-item ${disabled && "disabled"}`} onClick={onClick}>
+            {checked ? <FontAwesomeIcon icon={faCheckCircle}/> : <FontAwesomeIcon icon={faCircle} />}
+            <span>{option.label}</span>
+        </div>
+    );
 }
 
-export default function DropdownSelect ({value, onChange}) {
+const optionStrings = {
+  "allItemsAreSelected": "All items are selected.",
+  "clearSearch": "Clear Search",
+  "noOptions": "No options",
+  "search": "Search",
+  "selectAll": "Select All",
+  "selectSomeItems": "Select..."
+}
+
+
+export default function DropdownSelect ({options, value, onChanged, strings}) {
+    const overrideStrings = {...optionStrings, ...strings}
     return (
-        <Select
+        <MultiSelect
             options={options}
-            styles={customStyles}
-            isMulti
-            />
+            value={value}
+            labelledBy={"Select"}
+            onChange={onChanged}
+            disableSearch
+            ItemRenderer={DropdownItem}
+            overrideStrings={overrideStrings}
+        />
 
     )
-
 }

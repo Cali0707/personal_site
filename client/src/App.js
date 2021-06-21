@@ -2,7 +2,7 @@ import './App.css';
 import ProjectPage from "./components/project/ProjectPage";
 import projects from "./utils/project";
 import interests from './utils/interests';
-import React from "react";
+import React, {useState} from "react";
 import {BrowserRouter, Route, Redirect, Switch, useHistory} from "react-router-dom";
 import Home from "./pages/Home";
 import CardsPage from "./pages/ProjectsPage";
@@ -25,6 +25,8 @@ import DropdownSelect from "./components/form/DropdownSelect";
 
 function App() {
 
+    const [value, setValue] = useState([])
+
     return (
        // <Switch>
        //     {projects.map(proj => {
@@ -36,7 +38,7 @@ function App() {
        //     <Route path={'/'} render={()=><Home />} />
        //
        // </Switch>
-        <DropdownSelect />
+        <DropdownSelect value={value} onChanged={setValue}/>
     );
 }
 

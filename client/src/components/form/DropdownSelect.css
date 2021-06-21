@@ -1,0 +1,49 @@
+.rmsc {
+    --rmsc-main: var(--clr-neutral-700);
+    --rmsc-hover: var(--clr-accent-400);
+    --rmsc-selected: var(--clr-accent-400);
+    --rmsc-border: var(--clr-neutral-700);
+    --rmsc-gray: var(--clr-neutral-300);
+    --rmsc-bg: var(--clr-neutral-700);
+    --rmsc-p: 10px;
+    --rmsc-radius: 4px;
+    --rmsc-h: 38px;
+}
+
+.rmsc .dropdown-content {
+  background-color: var(--clr-neutral-700);
+    color: var(--clr-neutral-300);
+}
+
+.rmsc .dropdown-container:focus-within {
+    background-color: var(--clr-neutral-700);
+    color: var(--clr-neutral-300);
+    border: none;
+}
+
+.rmsc .select-item {
+    margin: 0;
+    color: var(--clr-neutral-300);
+}
+.rmsc .select-item:hover,
+.rmsc .select-item:focus {
+  color: var(--clr-neutral-900);
+}
+
+.dropdown-heading {
+    color: var(--clr-neutral-300);
+}
+
+.dropdown-item {
+    color: var(--clr-neutral-300);
+    background-color: transparent;
+}
+
+.dropdown-item:hover, .dropdown-item:focus {
+    color: var(--clr-neutral-900);
+    background-color: transparent;
+}
+
+.dropdown-item span {
+    margin-left: 12px;
+}
