@@ -2,7 +2,7 @@ import React from 'react'
 import './Timeline.css'
 import {Subtitle, TextSection} from "./text/text";
 
-export function TimelineItem({title, date, info}) {
+function TimelineItem({title, date, info}) {
     const [isVisible, setVisible] = React.useState(true);
     const domRef = React.useRef();
     React.useEffect(() => {

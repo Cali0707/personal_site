@@ -12,9 +12,7 @@ import Interests from "./pages/Interests";
 import DropdownSelect from "./components/form/DropdownSelect";
 
 /* TODO
-- Populate Interests page
 - Refactor Projects & Interests pages into component
-- Make My Interests page
 - Populate Projects page
 - Use local storage to prevent multiple emails (maybe also some kind of server side stop)
 - Make popup modal
@@ -25,20 +23,20 @@ import DropdownSelect from "./components/form/DropdownSelect";
 
 function App() {
 
-    const [value, setValue] = useState([])
-
     return (
-       // <Switch>
-       //     {projects.map(proj => {
-       //         return(<Route path={proj.path} exact render={()=><ProjectPage project={proj}/>} />)
-       //     })}
-       //     <Route path={'/projects'} exact render={()=><CardsPage projects={projects} />} />
-       //     <Route path={'/contact'} component={ContactMe} />
-       //     <Route path={'/interests'} render={()=><Interests interests={interests} />} />
-       //     <Route path={'/'} render={()=><Home />} />
-       //
-       // </Switch>
-        <DropdownSelect value={value} onChanged={setValue}/>
+       <Switch>
+           {projects.map(proj => {
+               return(<Route path={proj.path} exact render={()=><ProjectPage project={proj} />} />)
+           })}
+           {interests.map(interest => {
+               return(<Route path={interest.path} exact render={()=><ProjectPage project={interest} />} />)
+           })}
+           <Route path={'/projects'} exact render={()=><CardsPage projects={projects} selected={[]}/>} />
+           <Route path={'/contact'} exact component={ContactMe} />
+           <Route path={'/interests'} render={()=><Interests interests={interests} />} />
+           <Route path={'/'} render={()=><Home />} />
+
+       </Switch>
     );
 }
 

@@ -21,15 +21,19 @@ export default function Home () {
                 <img className={"profile"} src={"https://avatars.githubusercontent.com/u/65566908?v=4"} alt={"A picture of me"}/>
                 <div className={"about-me-text"}>
                     <Subtitle>About Me</Subtitle>
-                    <TextSection>Hi! My name is Calum, and I'm studying Engineering Science at the University of Toronto.
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias aliquid amet aperiam at atque commodi consequuntur cupiditate dicta dignissimos distinctio dolorem earum, eligendi esse eveniet expedita fugiat impedit ipsa laborum maxime mollitia odio quasi ratione repellendus tempora temporibus veritatis?
+                    <TextSection>Hi! My name is Calum, I'm in the Engineering Science class of 2024 at the University of Toronto, and I will probably end up in one of
+                        the Machine Intelligence, Robotics, or ECE majors after second year.
+                        I chose Engineering Science because I really enjoy learning the theory behind how things work and then applying it to make things work.
+                        <br/><br/>I am able to take initiative and think analytically
+                        and creatively to solve problems. I am able to learn quickly, work well under pressure, balance competing priorities, and deliver results.
+                        I aim to foster a collaborative environment in every project I work on, and I can both work independently and take on leadership roles.
                     </TextSection>
                 </div>
             </div>
             <div className={"navigation"}>
                 <Button onClick={()=>{handleClick("/projects")}} label={"View my Projects"} large/>
-                <Button onClick={()=>{handleClick('/contact')}} label={"Contact Me"} large />
                 <Button onClick={()=>{handleClick('/interests')}} label={"Interests"} large />
+                <Button onClick={()=>{handleClick('/contact')}} label={"Contact Me"} large />
             </div>
 
         </div>

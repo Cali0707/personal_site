@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const path = require('path')
 const emailRoutes = require('./routes/emailRoute').emailRoute;
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.MODE === "production" ? 443 : 3000;
 
 const app = express()
 const dir = __dirname + '/client/build'

@@ -3,28 +3,28 @@ import Header from "../Header";
 import TechDescription from "./TechDescription";
 import Github from "../socials/Github";
 import './ProjectPage.css';
+import Timeline from "../Timeline";
 
 
 export default function ProjectPage ({style, project}) {
-    const {name, imageLink, description, technologies, github} = project;
+    const {name, imageLink, descriptionLong, technologies, github, timeline} = project;
 
-    const techDescriptions = technologies.map((technology) => (
+    const techDescriptions = technologies ? technologies.map((technology) => (
         <TechDescription technology={technology} />
-    ))
+    )) : null;
 
     return (
         <div style={style} className={"project-page"}>
-            {/*<div className={"project-header"} style={{backgroundImage: `linear-gradient(rgba(19,23,27,0),rgba(19,23,27,20) 95%, rgba(19,23,27,100)),url(${imageLink})`}}>*/}
-            {/*    <Title style={{margin: "auto"}}>{name}</Title>*/}
-            {/*</div>*/}
             <Header title={name} imageLink={imageLink} />
             <div className={"project-content"} >
                 <Subtitle>Overview</Subtitle>
-                <TextSection>{description}</TextSection>
-                <Subtitle>Technologies Used</Subtitle>
-                {techDescriptions}
-                <Subtitle>Links</Subtitle>
-                <Github link={github} />
+                <TextSection>{descriptionLong}</TextSection>
+                {technologies && <Subtitle>Technologies Used</Subtitle>}
+                {technologies && techDescriptions}
+                {timeline && <Subtitle>Timeline</Subtitle>}
+                {timeline && <Timeline events={timeline} />}
+                {github && <Subtitle>Links</Subtitle>}
+                {github && <Github link={github} />}
             </div>
         </div>
     )

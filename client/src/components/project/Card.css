@@ -20,6 +20,7 @@
 .project-card-content {
     --padding: 1.5rem;
     position: absolute;
+    align-content: space-evenly;
     bottom: 0;
     height: 30ch;
     padding: var(--padding);
@@ -55,12 +56,17 @@
 
 .project-card-body {
     color: rgba(255, 255, 255, 0.8);
-    display: -webkit-box;
-      -webkit-line-clamp: 3;
-      -webkit-box-orient: vertical;
-    height: 40%;
+    /*display: -webkit-box;*/
+      /*-webkit-line-clamp: 3;*/
+      /*-webkit-box-orient: vertical;*/
+    height: 60%;
     overflow: hidden;
     /*outline: 1px solid red;*/
+}
+
+.project-card-content  .button {
+    position: absolute;
+    bottom: 1.5rem;
 }
 
 @media (hover) {
