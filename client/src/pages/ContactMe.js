@@ -5,9 +5,8 @@ import Header from "../components/Header";
 import {Subtitle, TextSection} from "../components/text/text";
 import TextInput from "../components/form/TextInput";
 import Button from "../components/form/Button";
-import {Modal} from "react-bootstrap";
 
-const url = process.env.MODE === 'production' ? 'https://www.calummurray.ca/email' : 'http://localhost:3000/email'
+const url = '/email'
 
 export default function ContactMe () {
     const [name, setName] = useState("");
