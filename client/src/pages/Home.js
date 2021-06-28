@@ -24,9 +24,9 @@ export default function Home () {
                     <TextSection>Hi! My name is Calum, I'm in the Engineering Science class of 2024 at the University of Toronto, and I will probably end up in one of
                         the Machine Intelligence, Robotics, or ECE majors after second year.
                         I chose Engineering Science because I really enjoy learning the theory behind how things work and then applying it to make things work.
-                        <br/><br/>I am able to take initiative and think analytically
-                        and creatively to solve problems. I am able to learn quickly, work well under pressure, balance competing priorities, and deliver results.
-                        I aim to foster a collaborative environment in every project I work on, and I can both work independently and take on leadership roles.
+                        <br/><br/>When solving problems, I think both analytically and creatively. I learn quickly, take initiative, work well under pressure,
+                        balance competing priorities, and deliver results. I work hard to foster a collaborative environment in all of my projects, and I can both work independently
+                        and take on leadership roles.
                     </TextSection>
                 </div>
             </div>

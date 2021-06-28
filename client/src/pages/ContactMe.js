@@ -1,10 +1,10 @@
 import React, {useState} from "react";
 import "./ContactMe.css";
-import {useHistory} from "react-router-dom";
 import Header from "../components/Header";
 import {Subtitle, TextSection} from "../components/text/text";
 import TextInput from "../components/form/TextInput";
 import Button from "../components/form/Button";
+import Loading from "../components/helpers/Loading";
 
 const url = '/email'
 
@@ -13,10 +13,12 @@ export default function ContactMe () {
     const [email, setEmail] = useState("");
     const [subject, setSubject] = useState("");
     const [message, setMessage] = useState("");
+    const [loading, setLoading] = useState(false)
     const [isSuccess, setIsSuccess] = useState(false)
 
     const handleSubmit = () => {
         if(!isSuccess){
+            setLoading(true)
             const requestOptions = {
                 method: 'POST',
                 headers: {"Content-Type": "application/json"},
@@ -29,10 +31,21 @@ export default function ContactMe () {
             };
             fetch(url, requestOptions)
                 .then(response => response.json())
-                .then(data => setIsSuccess(data.message === "Email sent successfully!"))
+                .then(data => {
+                    setIsSuccess(data.message === "Email sent successfully!");
+                    setLoading(false);
+                })
         }
 
     }
+
+    const contactForm = loading ? <Loading /> : (<div>
+        <TextInput label={"Name"} type={"text"} value={name} width={"50vw"} onChange={(text)=>setName(text)} />
+        <TextInput label={"Email"} type={"text"} value={email} width={"50vw"} onChange={(text)=>setEmail(text)} />
+        <TextInput label={"Subject"} type={"text"} value={subject} width={"50vw"} onChange={(text)=>setSubject(text)} />
+        <TextInput label={"Message"} width={"50vw"} type={"textArea"} value={message} onChange={(text)=>setMessage(text)} />
+        <Button onClick={handleSubmit} label={"Submit"} style={{margin: '12px 0'}}/>
+    </div>)
 
     return (
         <div className={'contact-page'}>
@@ -40,16 +53,9 @@ export default function ContactMe () {
                     title={"Contact Me"} />
             <div className={"contact-page-content"}>
                 <Subtitle>Contact Form</Subtitle>
-                <TextSection>Thank you for your interest in contacting me! In order to reach out, please complete the form below and I will reply
-                    within 1-2 business days.
+                <TextSection>Thank you for your interest in contacting me! In order to reach out, please complete the form below.
                 </TextSection>
-                <div>
-                    <TextInput label={"Name"} type={"text"} value={name} width={"50vw"} onChange={(text)=>setName(text)} />
-                    <TextInput label={"Email"} type={"text"} value={email} width={"50vw"} onChange={(text)=>setEmail(text)} />
-                    <TextInput label={"Subject"} type={"text"} value={subject} width={"50vw"} onChange={(text)=>setSubject(text)} />
-                </div>
-                <TextInput label={"Message"} width={"50vw"} type={"textArea"} value={message} onChange={(text)=>setMessage(text)} />
-                <Button onClick={handleSubmit} label={"Submit"} style={{margin: '12px 0'}}/>
+                {!isSuccess ? contactForm : <div><Subtitle>Success</Subtitle><TextSection>Thank you for reaching out! I will reply within 1-2 business days.</TextSection></div>}
                 <Subtitle>Social Media</Subtitle>
                 <TextSection>Feel free to follow me on my social medias, and to reach out to me there as well.
                 </TextSection>

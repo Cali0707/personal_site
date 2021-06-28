@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const path = require('path')
 const emailRoutes = require('./routes/emailRoute').emailRoute;
 
-const PORT = process.env.MODE === "production" ? 443 : 3000;
+const PORT = 3000;
 
 const app = express()
 const dir = __dirname + '/client/build'
@@ -14,13 +14,8 @@ app.use(express.static(dir));
 
 emailRoutes(app);
 
-app.get('/mode', (req, res) => {
-    res.status(300).send({
-        message: process.env.MODE
-    })
-})
-
 app.get('*', (req, res) => {
+    console.log("Incoming request")
     res.sendFile("index.html", {root: dir})
 })
 

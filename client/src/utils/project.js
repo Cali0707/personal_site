@@ -3,8 +3,8 @@ const projects = [
         name: "Personal Website",
         path: '/projects/personal-website',
         imageLink: "https://images.unsplash.com/photo-1457305237443-44c3d5a30b89?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1053&q=80",
-        description: "This is the website you are on right now!",
-        descriptionLong: "This is the website you are on right now! I wanted a place where I could showcase my various projects and interests, and I also wanted a place" +
+        description: "This is the website you are on right now.",
+        descriptionLong: "This is the website you are on right now. I wanted a place where I could showcase my various projects and interests, and I also wanted a place" +
             "to play around with and learn web frameworks, so I put those to objectives together and created this.",
         technologies: [
             {
@@ -23,7 +23,7 @@ const projects = [
         path: "/projects/bridge-optimizer",
         imageLink: "https://images.unsplash.com/photo-1493476523860-a6de6ce1b0c3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
         description: "In this project I made a python script to calculate the optimal dimensions for a bridge.",
-        descriptionLong: "A civil engineering course (CIV102) project required the class to design a simply supported beam out of Matboard that would span 950mm" +
+        descriptionLong: "A civil engineering course (CIV102) project required the class to design a simply supported beam out of Matboard that would span 950mm " +
             "and be subjected to two point loads. My team went further and developed a Python program that found all possible dimensions which could be cut from the " +
             "provided Matboard, and then looped through them to find the optimal set of dimensions.",
         technologies: [
@@ -39,7 +39,7 @@ const projects = [
         path: "/projects/3d-wrist-mouse",
         imageLink: "https://images.unsplash.com/photo-1562877773-a37120131ec4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1049&q=80",
         description: "I constructed a working prototype of a computer 'mouse' that allows a user to control their cursor by moving their hand around in the air.",
-        descriptionLong: "For a two week engineering design project, I constructed a working prototype of a computer 'mouse' that allows a user to control their cursor" +
+        descriptionLong: "For a two week engineering design project, I constructed a working prototype of a computer 'mouse' that allows a user to control their cursor " +
             "by moving their hand around in the air or on a desk. The project's objective was to reduce or prevent carpal tunnel syndrome. We accomplished this by " +
             "minimizing the root cause, namely, pressure on the medial nerve in the wrist.",
         technologies: [
@@ -68,7 +68,7 @@ const projects = [
         path: "/projects/workout-app",
         imageLink: "https://images.unsplash.com/photo-1563986768609-322da13575f3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
         description: "As a personal project I made a basic workout app to generate personalized workouts.",
-        descriptionLong: "As a personal project starting in the spring of 2020, I developed an app to generate personalized workouts. Workouts take account of the user's ablility" +
+        descriptionLong: "As a personal project starting in the spring of 2020, I developed an app to generate personalized workouts. Workouts take account of the user's ability " +
             "level, desired length of the work out, and the intended focus of the workout (eg. core, arms, etc.).",
         technologies: [
             {
