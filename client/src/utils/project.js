@@ -5,7 +5,7 @@ const projects = [
         imageLink: "https://images.unsplash.com/photo-1457305237443-44c3d5a30b89?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1053&q=80",
         description: "This is the website you are on right now.",
         descriptionLong: "This is the website you are on right now. I wanted a place where I could showcase my various projects and interests, and I also wanted a place" +
-            "to play around with and learn web frameworks, so I put those to objectives together and created this.",
+            "to play around with and learn more about React, Express, and Node.js. So I put those two objectives together and created this.",
         technologies: [
             {
                 name: "React",
@@ -45,16 +45,16 @@ const projects = [
         technologies: [
             {
                 name: "Arduino",
-                use: "I soldered an Inertial Measurement Unit onto an Arduino MKR 1010 wifi board which would communicate to my computer."
+                use: "I soldered an Inertial Measurement Unit onto an Arduino MKR 1010 wifi board which communicated to my computer."
             },
             {
                 name: "Python",
-                use: "I used Python to handle the Bluetooth Low Energy connection from the Arduino, to filter the incoming data from the Inertial Measurement Unit, and then " +
+                use: "I used Python on my personal computer to handle the Bluetooth Low Energy connection from the Arduino, to filter the incoming data from the Inertial Measurement Unit, and then " +
                     "to calculate the appropriate distance to move the mouse."
             },
             {
                 name: "Bluetooth Low Energy",
-                use: "I used Bluetooth Low Energy to stream data from the Inertial Measurement Unit to my computer."
+                use: "I used Bluetooth Low Energy to stream data from the Arduino to my computer."
             },
             {
                 name: "C++",
@@ -68,7 +68,8 @@ const projects = [
         path: "/projects/workout-app",
         imageLink: "https://images.unsplash.com/photo-1563986768609-322da13575f3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
         description: "As a personal project I made a basic workout app to generate personalized workouts.",
-        descriptionLong: "As a personal project starting in the spring of 2020, I developed an app to generate personalized workouts. Workouts take account of the user's ability " +
+        descriptionLong: "As a personal project starting in the spring of 2020, I developed an app to generate personalized workouts similar to those my coach wrote, with the " +
+            "added objective of learning Dart and Flutter. Workouts take account of the user's ability " +
             "level, desired length of the work out, and the intended focus of the workout (eg. core, arms, etc.).",
         technologies: [
             {
