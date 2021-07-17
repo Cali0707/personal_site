@@ -41,7 +41,7 @@
   width: 400px;
   max-width: 80%;
   text-align: right;
-  transition: transform 0.3s ease;
+  transition: background-color ease 5s;
 }
 
 .timelineItemContent::after {
@@ -54,7 +54,6 @@
   transform: rotate(45deg);
   width: 16px;
   height: 16px;
-  transition: transform 0.3s ease;
 }
 
 .timelineItem:nth-child(odd) .timelineItemContent {
@@ -94,12 +93,11 @@
 }
 
 .timelineItemContent:hover {
-  transform: scale(1.05);
-  transform-origin: top left;
+  background-color: var(--clr-neutral-600);
 }
 
-.timelineItem:nth-child(even) .timelineItemContent:hover {
-  transform-origin: top right;
+.timelineItemContent:hover::after {
+  background-color: var(--clr-neutral-600);
 }
 
 .timelineItemContent:hover .circle {

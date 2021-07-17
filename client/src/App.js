@@ -10,13 +10,12 @@ import ContactMe from "./pages/ContactMe";
 import Timeline from "./components/Timeline";
 import Interests from "./pages/Interests";
 import DropdownSelect from "./components/form/DropdownSelect";
+import Education from "./pages/Education";
 
 /* TODO
 - Refactor Projects & Interests pages into component
 - Populate Projects page
-- Use local storage to prevent multiple emails (maybe also some kind of server side stop)
 - Make popup modal
-- Make loading animation
 - make Education page
 - Make Employment page
  */
@@ -33,7 +32,8 @@ function App() {
            })}
            <Route path={'/projects'} exact render={()=><CardsPage projects={projects} selected={[]}/>} />
            <Route path={'/contact'} exact component={ContactMe} />
-           <Route path={'/interests'} render={()=><Interests interests={interests} />} />
+           <Route path={'/interests'} exact render={()=><Interests interests={interests} />} />
+           <Route path={'/education'} component={Education} />
            <Route path={'/'} render={()=><Home />} />
 
        </Switch>

@@ -31,7 +31,8 @@ export default function Home () {
                 </div>
             </div>
             <div className={"navigation"}>
-                <Button onClick={()=>{handleClick("/projects")}} label={"View my Projects"} large/>
+                <Button onClick={()=>{handleClick("/projects")}} label={"Projects"} large/>
+                <Button onClick={()=>{handleClick('/education')}} label={"Education"} large />
                 <Button onClick={()=>{handleClick('/interests')}} label={"Interests"} large />
                 <Button onClick={()=>{handleClick('/contact')}} label={"Contact Me"} large />
             </div>
