@@ -7,6 +7,7 @@ import Header from "../components/Header";
 import {useHistory} from "react-router-dom";
 
 export default function Home () {
+
     let history = useHistory();
 
     const handleClick = (link) => {
@@ -14,6 +15,7 @@ export default function Home () {
     }
 
     const imageLink = "https://images.unsplash.com/photo-1618143416214-16501f28d943?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
+
     return(
         <div className={"home"}>
             <Header imageLink={imageLink} title={"Calum Murray"} history={history} isHome/>
@@ -36,8 +38,6 @@ export default function Home () {
                 <Button onClick={()=>{handleClick('/interests')}} label={"Interests"} large />
                 <Button onClick={()=>{handleClick('/contact')}} label={"Contact Me"} large />
             </div>
-
         </div>
-
     )
 }

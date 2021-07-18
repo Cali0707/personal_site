@@ -88,7 +88,7 @@
   right: -40px;
   width: 20px;
   height: 20px;
-  z-index: 100;
+  z-index: 80;
   transition: background-color 0.3s ease;
 }
 
@@ -164,7 +164,7 @@
 }
 
 .fadeInSection {
-  z-index: 100;
+  z-index: 80;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.6s ease-out;
