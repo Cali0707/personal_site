@@ -1,4 +1,4 @@
-import {Title, Subtitle, TextSection} from '../text/text';
+import {Subtitle, TextSection} from '../text/text';
 import Header from "../Header";
 import TechDescription from "./TechDescription";
 import Github from "../socials/Github";

@@ -2,22 +2,19 @@ import './App.css';
 import ProjectPage from "./components/project/ProjectPage";
 import projects from "./utils/project";
 import interests from './utils/interests';
-import React, {useState} from "react";
-import {BrowserRouter, Route, Redirect, Switch, useHistory} from "react-router-dom";
+import React from "react";
+import {Route, Switch} from "react-router-dom";
 import Home from "./pages/Home";
 import CardsPage from "./pages/ProjectsPage";
 import ContactMe from "./pages/ContactMe";
-import Timeline from "./components/Timeline";
 import Interests from "./pages/Interests";
-import DropdownSelect from "./components/form/DropdownSelect";
 import Education from "./pages/Education";
 
 /* TODO
 - Refactor Projects & Interests pages into component
-- Populate Projects page
-- Make popup modal
-- make Education page
-- Make Employment page
+- Make popup modal -> use this for filtering of projects
+- Add social media links (probably instagram, linkedin, strava)
+- Make Employment page - not sure about this one
  */
 
 function App() {

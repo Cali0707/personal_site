@@ -1,6 +1,6 @@
 import React from "react";
 import './TechDescription.css';
-import {Subtitle, TextSection, TextLink} from "../text/text";
+import {Subtitle, TextSection} from "../text/text";
 import Button from '../form/Button'
 import {useHistory} from "react-router-dom";
 

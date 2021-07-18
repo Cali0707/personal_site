@@ -94,7 +94,9 @@ const projects = [
         path: '/projects/f!rosh-discord-bot',
         imageLink: "https://images.unsplash.com/photo-1614680376739-414d95ff43df?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80",
         description: "I worked with members of the F!rosh week tech team to create a discord bot to handle submissions during the F!rosh week scavenger hunt.",
-        descriptionLong: "",
+        descriptionLong: "To handle the submission of images and videos of tasks during the frosh week scavenger hunt, I worked with the other members of the F!rosh week tech team" +
+            " to create a discord bot. The bot allows users to login to their F1rosh week account, submit evidence of completion of tasks, and check statuses of tasks (whether or not " +
+            "it is completed, how many points were awarded, etc.).",
         technologies: [
             {
                 name: "Python",
@@ -102,7 +104,7 @@ const projects = [
             },
             {
                 name: "MongoDB",
-                use: ""
+                use: "I used MongoDB to store the statuses and points of each scavenger hunt task"
             }
         ]
     },
@@ -128,7 +130,7 @@ const projects = [
     {
         name: "Bridge Optimizer",
         path: "/projects/bridge-optimizer",
-        imageLink: "https://images.unsplash.com/photo-1493476523860-a6de6ce1b0c3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
+        imageLink: "https://images.unsplash.com/photo-1477288309209-a14ce05a641e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1189&q=80",
         description: "In this project I made a python script to calculate the optimal dimensions for a bridge.",
         descriptionLong: "A civil engineering course (CIV102) project required the class to design a simply supported beam out of Matboard that would span 950mm " +
             "and be subjected to two point loads. My team went further and developed a Python program that found all possible dimensions which could be cut from the " +

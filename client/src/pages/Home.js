@@ -1,7 +1,6 @@
 import React from "react";
 import './Home.css';
-import {Subtitle, TextSection, Title} from '../components/text/text';
-import TextInput from "../components/form/TextInput";
+import {Subtitle, TextSection} from '../components/text/text';
 import Button from "../components/form/Button";
 import Header from "../components/Header";
 import {useHistory} from "react-router-dom";
@@ -20,7 +19,7 @@ export default function Home () {
         <div className={"home"}>
             <Header imageLink={imageLink} title={"Calum Murray"} history={history} isHome/>
             <div className={"about-me"}>
-                <img className={"profile"} src={"https://avatars.githubusercontent.com/u/65566908?v=4"} alt={"A picture of me"}/>
+                <img className={"profile"} src={"https://avatars.githubusercontent.com/u/65566908?v=4"} alt={"My profile"}/>
                 <div className={"about-me-text"}>
                     <Subtitle>About Me</Subtitle>
                     <TextSection>Hi! My name is Calum, I'm in the Engineering Science class of 2024 at the University of Toronto, and I will probably end up in one of

@@ -4,7 +4,8 @@
   "scripts": {
     "start:dev": "node app.js",
     "server": "cd client && yarn build && cd ../ && yarn start:dev",
-    "start:prod": "cd client && yarn build && cd ../ && MODE=production pm2 start app.js"
+    "start:prod": "cd client && yarn build && cd ../ && MODE=production pm2 start app.js",
+    "restart:prod": "cd client && yarn build && cd ../ && MODE=production pm2 restart app.js"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
