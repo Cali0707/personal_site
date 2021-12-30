@@ -3,7 +3,7 @@ const interests = [
         name: "Swimming",
         path: '/interests/swimming',
         imageLink: 'https://images.unsplash.com/photo-1600965962323-6362f726c3f8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
-        description: "I was a competitive swimmer from grades 7-12",
+        description: "I was a competitive swimmer from grades 7-12.",
         descriptionLong: "I've been swimming since I was very young and my parents took me to swim lessons, but I really fell in love with the sport " +
             "when I started doing it competitively in grade 7 with Toronto Swim Club. Throughout high school I progressed rapidly and won medals at " +
             "both the regional and provincial levels. My favourite event is the 100 meter butterfly. I still swim when pools are open and my schedule " +
@@ -13,7 +13,7 @@ const interests = [
         name: "Piano",
         path: "/interests/piano",
         imageLink: "https://images.unsplash.com/photo-1551970353-3960cb854a2b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=975&q=80",
-        description: "I've played piano since I was 4. I have played a range of styles primarily focusing on classical and jazz.",
+        description: "I've played piano since I was 4. I play a range of styles primarily focusing on classical and jazz.",
         descriptionLong: "I've been playing piano for nearly my entire life, having started lessons when I was just four years old. The highlight " +
             "of my piano career came in November 2018 when I was asked to play piano at the reception for the Toronto Mayor's Ball for the Arts, " +
             "a multimillion dollar fundraiser in Toronto. At that event I played a one hour set of jazz renditions of various Christmas songs as " +
