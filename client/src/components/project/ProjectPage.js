@@ -4,6 +4,7 @@ import TechDescription from "./TechDescription";
 import Github from "../socials/Github";
 import './ProjectPage.css';
 import Timeline from "../Timeline";
+import {useEffect} from "react";
 
 
 export default function ProjectPage ({style, project}) {
@@ -12,6 +13,10 @@ export default function ProjectPage ({style, project}) {
     const techDescriptions = technologies ? technologies.map((technology) => (
         <TechDescription technology={technology} />
     )) : null;
+
+    useEffect(() => {
+        window.scrollTo(0,0)
+    }, []);
 
     return (
         <div style={style} className={"project-page"}>
