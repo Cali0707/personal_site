@@ -22,9 +22,9 @@ export default function Home () {
                 <img className={"profile"} src={"https://avatars.githubusercontent.com/u/65566908?v=4"} alt={"My profile"}/>
                 <div className={"about-me-text"}>
                     <Subtitle>About Me</Subtitle>
-                    <TextSection>Hi! My name is Calum, I'm in the Engineering Science class of 2024 at the University of Toronto, and I will probably end up in one of
-                        the Machine Intelligence, Robotics, or ECE majors after second year.
-                        I chose Engineering Science because I really enjoy learning the theory behind how things work and then applying it to make things work.
+                    <TextSection>My name is Calum, and I'm in the Engineering Science class of 2024 at the University of Toronto. I will likely choose either
+                        the Machine Intelligence or ECE major after second year.
+                        I chose Engineering Science because I really enjoy learning the theory behind how things work and then applying it to make things work better.
                         <br/><br/>When solving problems, I think both analytically and creatively. I learn quickly, take initiative, work well under pressure,
                         balance competing priorities, and deliver results. I work hard to foster a collaborative environment in all of my projects, and I can both work independently
                         and take on leadership roles.

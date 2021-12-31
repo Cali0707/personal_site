@@ -13,8 +13,7 @@ export default function Card ({cardItem}) {
     return (
         <div className={"project-card"} style={{backgroundImage: `url(${cardItem.imageLink})`}}>
             <div className={"project-card-content"}>
-                <h2 className={"project-card-title"}>
-                    {cardItem.name}
+                <h2 className={"project-card-title"} dangerouslySetInnerHTML={{__html: cardItem.name}}>
                 </h2>
                 <p className={"project-card-body"}>
                     {cardItem.description}
