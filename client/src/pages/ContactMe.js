@@ -57,7 +57,8 @@ export default function ContactMe () {
                 </TextSection>
                 {!isSuccess ? contactForm : <div><Subtitle>Success</Subtitle><TextSection>Thank you for reaching out! I will reply within 1-2 business days.</TextSection></div>}
                 <Subtitle>Social Media</Subtitle>
-                <TextSection>Feel free to follow me on my social medias, and to reach out to me there as well.
+                <TextSection>
+                    Feel free to follow my social media accounts.
                 </TextSection>
             </div>
         </div>

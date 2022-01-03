@@ -1,0 +1,38 @@
+.social-media-tile {
+    background-color: var(--clr-neutral-700);
+    max-width: 100%;
+    width: 3em;
+    padding: 8px;
+    border-radius: 6px;
+    transition: transform 300ms ease, color 300ms ease;
+    color: var(--clr-neutral-300);
+    text-decoration: none;
+    cursor: pointer;
+    align-content: center;
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+.social-media-tile:hover, .social-media-tile:focus-within {
+    transform: scale(1.05);
+    background-color: var(--clr-accent-400);
+    color: var(--clr-neutral-700);
+}
+
+.social-media-tile > svg {
+    fill: gray;
+    transition: fill 300ms ease, transform 300ms ease;
+    display: inline;
+}
+
+.social-media-tile:hover .social-media-tile > svg, .social-media-tile:focus-within .social-media-tile > svg {
+    fill: var(--clr-neutral-700);
+    transform: scale(1.05);
+}
+
+.social-media-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
