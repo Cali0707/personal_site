@@ -80,7 +80,6 @@ const projects = [
                 use: "I worked with others on the team to revise the schemas we used for our collections in MongoDB, specifically to store Frosh data."
             }
         ],
-        link: "orientation.skule.ca"
     },
     {
         name: "F!rosh App",
@@ -277,7 +276,7 @@ const projects = [
     },
     {
         name: "Wix Charitable\nReceipts App",
-        path: '/projects/wic-charitable-receipts-application',
+        path: '/projects/wix-charitable-receipts-application',
         imageLink: "https://images.unsplash.com/photo-1634733988138-bf2c3a2a13fa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
         description: "I made a Wix Application that allows charities to generate Canada Revenue Agency compliant Charitable Receipts.",
         descriptionLong: [
