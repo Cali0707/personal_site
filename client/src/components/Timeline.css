@@ -104,6 +104,11 @@
   background-color: var(--clr-accent-400);
 }
 
+.timelineItemContent:hover > .text-section > ul > li > .button {
+    background-color: var(--clr-neutral-600);
+    color: var(--clr-accent-400);
+}
+
 .timelineItem:nth-child(odd) .timelineItemContent .circle {
   right: auto;
   left: -40px;

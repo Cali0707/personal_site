@@ -1,10 +1,38 @@
 import React from 'react'
 import './Timeline.css'
 import {Subtitle, TextSection} from "./text/text";
+import Button from "./form/Button";
+import {useHistory} from "react-router-dom";
 
-function TimelineItem({title, date, info}) {
+function TimelineItem({title, date, info, links}) {
     const [isVisible, setVisible] = React.useState(true);
     const domRef = React.useRef();
+    const history = useHistory();
+    let body;
+
+    if (links) {
+        const buttons = links.map(l => {
+            const handleClick = () => {
+                history.push(l.url)
+            }
+            return <Button onClick={handleClick} label={l.title} />
+        })
+        body = <div className={`timelineItemContent fadeInSection ${isVisible ? 'isVisible' : ''}`} ref={domRef}>
+                <Subtitle>{title}</Subtitle>
+                <time>{date}</time>
+                <TextSection>{info}</TextSection>
+                {buttons}
+                <span className={"circle"}/>
+            </div>
+    } else {
+        body = <div className={`timelineItemContent fadeInSection ${isVisible ? 'isVisible' : ''}`} ref={domRef}>
+                <Subtitle>{title}</Subtitle>
+                <time>{date}</time>
+                <TextSection>{info}</TextSection>
+                <span className={"circle"}/>
+            </div>
+    }
+
     React.useEffect(() => {
         const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => setVisible(entry.isIntersecting));
@@ -13,14 +41,10 @@ function TimelineItem({title, date, info}) {
         observer.observe(current);
         return () => observer.unobserve(current);
     }, []);
+
     return (
         <div className={"timelineItem"}>
-            <div className={`timelineItemContent fadeInSection ${isVisible ? 'isVisible' : ''}`} ref={domRef}>
-                <Subtitle>{title}</Subtitle>
-                <time>{date}</time>
-                <TextSection>{info}</TextSection>
-                <span className={"circle"}/>
-            </div>
+            {body}
         </div>
     )
 }
